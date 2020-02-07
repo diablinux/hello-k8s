@@ -1,6 +1,6 @@
 # Hello Kubernetes
 
-A simple flask app to test in docekr/kubernetes
+A simple flask app to test in docker/kubernetes
 
 **Pull the image**
 
