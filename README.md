@@ -1,3 +1,5 @@
+[![Build Status](https://diablinux.visualstudio.com/Test/_apis/build/status/diablinux.hello-k8s?branchName=master)](https://diablinux.visualstudio.com/Test/_build/latest?definitionId=1&branchName=master)
+
 # Hello Kubernetes
 
 A simple flask app to test in docker/kubernetes
