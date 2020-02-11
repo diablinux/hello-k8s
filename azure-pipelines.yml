@@ -23,6 +23,6 @@ stages:
     - task: Docker@2
       inputs:
         containerRegistry: 'Github-Connection'
-        repository: 'hello-k8s'
+        repository: 'diablinux/hello-k8s'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
