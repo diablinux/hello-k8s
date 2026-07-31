@@ -20,6 +20,7 @@ spec:
       containers:
       - name: hello-k8s
         image: diablinux/hello-k8s:latest
+        imagePullPolicy: Always
         resources:
           requests:
             cpu: "0.1"
