@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import os
 import datetime
 
@@ -13,7 +11,7 @@ def hello():
     return jsonify({
         'message': "Hello from Kubernetes!",
         'hostname': os.getenv("HOSTNAME"),
-        'time': datetime.datetime.now().isoformat()
+        'time': datetime.datetime.now(datetime.timezone.utc).isoformat()
     })
 
 
@@ -23,7 +21,7 @@ def health():
 
 
 def main():
-    app.run(debug=False, host="0.0.0.0")
+    app.run(debug=False, host="0.0.0.0", port=int(os.getenv("PORT", "5000")))
 
 
 if __name__ == "__main__":
