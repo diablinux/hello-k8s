@@ -21,6 +21,22 @@ spec:
       - name: hello-k8s
         image: diablinux/hello-k8s:latest
         imagePullPolicy: Always
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: http-api
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          timeoutSeconds: 2
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: http-api
+          initialDelaySeconds: 15
+          periodSeconds: 20
+          timeoutSeconds: 2
+          failureThreshold: 3
         resources:
           requests:
             cpu: "0.1"
