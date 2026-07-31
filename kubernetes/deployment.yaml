@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: hello-k8s
-        image: diablinux/hello-k8s:20260731.6
+        image: diablinux/hello-k8s:latest
         imagePullPolicy: Always
         resources:
           requests:
