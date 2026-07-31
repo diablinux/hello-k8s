@@ -25,6 +25,7 @@ stages:
         containerRegistry: 'DockerHub-Connection'
         repository: 'diablinux/hello-k8s'
         command: 'buildAndPush'
-        Dockerfile: '**/Dockerfile'
+        Dockerfile: 'Dockerfile'
+        buildContext: '$(Build.SourcesDirectory)'
         tags: |
           $(tag)
