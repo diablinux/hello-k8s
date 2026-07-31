@@ -6,6 +6,12 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 
+@app.after_request
+def add_response_headers(response):
+    response.headers["X-App"] = "flask"
+    return response
+
+
 @app.route("/", methods=["GET"])
 def hello():
     return jsonify({

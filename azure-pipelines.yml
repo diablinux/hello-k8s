@@ -37,4 +37,5 @@ stages:
     - script: |
         set -euo pipefail
         docker buildx imagetools inspect docker.io/$(dockerHubNamespace)/$(imageName):$(tag)
-      displayName: Verify image exists on Docker Hub
+        docker buildx imagetools inspect docker.io/$(dockerHubNamespace)/$(imageName):latest
+      displayName: Verify image tags exist on Docker Hub
