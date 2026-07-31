@@ -21,8 +21,11 @@ spec:
       - name: hello-k8s
         image: diablinux/hello-k8s:latest
         resources:
-          limits:
+          requests:
             cpu: "0.1"
+            memory: 100Mi
+          limits:
+            cpu: "0.2"
             memory: 100Mi
         ports:
         - name: http-api
